@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Infinite Scroll Blocker - Settings</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Sen&display=swap" rel="stylesheet">
+<style type="text/css">
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 2rem;
+}
+
+h1 {
+    font-family: 'Sen', sans-serif;
+}
+
+p {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: underline;
+    font-weight: bolder;
+    color: black;
+}
+
+button {
+    border: 1px solid;
+    border-radius: 3px;
+    background: white;
+    padding: 5px 10px;
+}
+
+.btn-green {
+    background: #7ceabd;
+}
+
+.bg-green {
+    padding: 1rem;
+    background-color: #7ceabd;
+    border-radius: 3px;
+}
+
+button:hover {
+    box-shadow: 1px 1px 2px 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.add-site {
+    padding: 1rem 0 0 0;
+}
+
+.add-site-row {
+    padding: 0 0 1rem 0;
+}
+
+.add-site-name {
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.delete-site {
+    cursor: pointer;
+}
+
+.allowed-table {
+    padding: 1rem 0;
+    width: 600px;
+}
+
+td:nth-child(2) {
+    text-align: center;
+    font-weight: bold;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="resources/datatables.min.css"/>
+<script type="text/javascript" src="resources/datatables.min.js"></script>
+</head>
+<body>
+<h1>Infinite Scroll Blocker Settings - v1.2</h1>
+
+<label class="option">
+  Scroll blocker dismiss message:
+  <input type="text" id="reminderTextInput"  placeholder="Should I be doing this?"></input>
+</label>
+<br/>
+<br/>
+
+<h2 class="add-site">Allowed sites (plugin disabled)</h2>
+<div class="add-site-row">
+    <input type="text" id="addSiteName" class="add-site-name" placeholder="jcpretorius.com" value=""></input>
+    <button id="addRow">Add website</button>
+</div>
+
+<div class="allowed-table">
+    <table id="allowedTable" ></table>
+</div>
+
+<br/>
+<button id="save" class="btn-green">Save</button>
+
+<br/>
+<br/>
+<div id="status" class="bg-green hidden">Saved.</div>
+
+<br/>
+
+<p>
+If you found this extension useful feel free to <a href="https://chrome.google.com/webstore/detail/infinite-scroll-blocker/pbpfkabjjkbnenfmpcnkpfiabplihndp" target="_blank">leave a review</a> or <a href="https://twitter.com/intent/tweet?text=Check out Infinite Scroll Blocker for chrome by @jacob_pretorius on projects.jcpretorius.com/infinite-scroll-blocker" target="_blank">Tweet</a> about it.
+</p>
+<p>
+Made by <a href="https://jcpretorius.com/" target="_blank">Jacob Pretorius</a>✌.
+</p>
+
+<script src="settings.js"></script>
+</body>
+</html>
